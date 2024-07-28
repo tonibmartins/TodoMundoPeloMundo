@@ -1,0 +1,12 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    padding-block: 1.5em;
+}
+
+main img{
+    width: 17.8em;
+    height: 17.8em;
+    object-fit: cover;
+}
