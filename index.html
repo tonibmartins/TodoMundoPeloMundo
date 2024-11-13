@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/form.css">
 </head>
 <body>
     <div class="bg-surface-color">
@@ -148,6 +149,35 @@
             </div>
 
             <button type="submit" class="btn-submit">Enviar</button>
+        </form>
+    </section>
+
+    <section id="registro-relatorio" class="container bg-surface-color">
+        <h2 class="form-title">Registre um Relatório</h2>
+        <p class="form-description">Descreva as experiências e lições aprendidas em suas expedições.</p>
+
+        <form action="#" method="POST" class="relatorio-form">
+            <div class="form-group">
+                <label for="titulo">Título do Relatório</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Ex: Aventuras na Amazônia" required>
+            </div>
+
+            <div class="form-group">
+                <label for="data-expedicao">Data da Expedição</label>
+                <input type="date" id="data-expedicao" name="data-expedicao" required>
+            </div>
+
+            <div class="form-group">
+                <label for="resumo">Resumo</label>
+                <textarea id="resumo" name="resumo" rows="5" placeholder="Compartilhe um resumo sobre a expedição." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="imagem-relatorio">Upload de Imagem</label>
+                <input type="file" id="imagem-relatorio" name="imagem-relatorio" accept="image/*">
+            </div>
+
+            <button type="submit" class="btn-submit">Registrar</button>
         </form>
     </section>
 
