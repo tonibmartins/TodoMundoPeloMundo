@@ -51,82 +51,79 @@
 
                 <button type="submit" class="btn-submit">Enviar</button>
             </form>
-        </main>
-    </div>
+                        <div class="form-group">
+                    <button onclick="window.location.href='index.html'" class="btn-back">Voltar para a Página Inicial</button>
+                </div>
+            </main>
+        </div>
 
     <style>
         body {
-            font-family: "Poppins", sans-serif;
-            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
         }
 
         .container {
             max-width: 800px;
-            margin: 2rem auto;
+            margin: auto;
             overflow: hidden;
-            padding: 1rem 2rem;
+            padding: 0 20px;
         }
 
         .bg-surface-color {
-            background: #ffffff;
-            padding: 2rem;
+            background: #fff;
+            padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #444;
+            margin-bottom: 20px;
+            color: #333;
         }
 
         p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 20px;
             font-size: 1rem;
-            color: #555;
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 15px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 5px;
             font-weight: bold;
-            color: #555;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 0.75rem;
+            padding: 10px;
             border: 1px solid #ddd;
-            border-radius: 5px;
+            border-radius: 4px;
             font-size: 1rem;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #007bff;
-            box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+            border-color: #007BFF;
         }
 
         .btn-submit {
-            display: block;
-            width: 100%;
-            background: #007bff;
-            color: #ffffff;
-            padding: 0.75rem;
+            display: inline-block;
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
             font-size: 1rem;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
-            text-align: center;
-            transition: background 0.3s ease;
         }
 
         .btn-submit:hover {
