@@ -7,12 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo Mundo Pelo Mundo</title>
-    <link rel="stylesheet" href="/styles/global.css">
-    <link rel="stylesheet" href="/styles/nav.css">
-    <link rel="stylesheet" href="/styles/header.css">
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/footer.css">
-    <link rel="stylesheet" href="/styles/form.css">
+    <link rel="stylesheet" href="/styles/index.css">
 </head>
 <body>
     <div class="bg-surface-color">
@@ -28,7 +23,7 @@
                         <img src="assets/icons/MagnifyingGlass.svg" alt="Pesquisar">
                     </a>
                 </li>
-                <li><a href="#">Explorer</a></li>
+                <li><a href="/expedicoes.html">Explore</a></li>
                 <li><a href="#">Minhas Viagens</a></li>
                 <li><a href="#">
                     <img src="/assets/images/profile_jairo.jpg" alt="Foto de Perfil">
@@ -112,59 +107,6 @@
             <img src="/assets/images/Budapeste.jpeg" alt="imagem teste">
         </a>
     </main>
-
-    <section id="nova-expedicao" class="container bg-surface-color">
-        <h2 class="form-title">Planeje Sua Próxima Expedição</h2>
-        <p class="form-description">Preencha os dados abaixo para compartilhar sua próxima aventura com o mundo.</p>
-
-        <form action="#" method="POST" class="expedicao-form">
-            <div class="form-group">
-                <label for="nome">Nome da Expedição</label>
-                <input type="text" id="nome" name="nome" placeholder="Ex: Explorando a Amazônia" required>
-            </div>
-
-            <div class="form-group">
-                <label for="destino">Destino</label>
-                <input type="text" id="destino" name="destino" placeholder="Ex: Amazonas, Brasil" required>
-            </div>
-
-            <div class="form-group">
-                <label for="data">Data de Início</label>
-                <input type="date" id="data" name="data" required>
-            </div>
-
-            <div class="form-group">
-                <label for="duracao">Duração (dias)</label>
-                <input type="number" id="duracao" name="duracao" min="1" placeholder="Ex: 10" required>
-            </div>
-
-            <div class="form-group">
-                <label for="descricao">Descrição</label>
-                <textarea id="descricao" name="descricao" rows="5" placeholder="Conte mais sobre a expedição, objetivos, atividades planejadas, etc." required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="imagem">Upload de Imagem</label>
-                <input type="file" id="imagem" name="imagem" accept="image/*">
-            </div>
-
-            <button type="submit" class="btn-submit">Enviar</button>
-        </form>
-    </section>
-
-    <section id="relatorio-email" class="container bg-surface-color">
-        <h2 class="form-title">Modelo de Relatório</h2>
-        <p class="form-description">Este é o formato do relatório enviado por e-mail:</p>
-
-        <div class="email-template">
-            <h3>Relatório de Expedição</h3>
-            <p><strong>Nome da Expedição:</strong> {{nome}}</p>
-            <p><strong>Destino:</strong> {{destino}}</p>
-            <p><strong>Data de Início:</strong> {{data}}</p>
-            <p><strong>Duração:</strong> {{duracao}} dias</p>
-            <p><strong>Descrição:</strong> {{descricao}}</p>
-        </div>
-    </section>
 
     <footer class="container">
         <span>
