@@ -152,33 +152,18 @@
         </form>
     </section>
 
-    <section id="registro-relatorio" class="container bg-surface-color">
-        <h2 class="form-title">Registre um Relatório</h2>
-        <p class="form-description">Descreva as experiências e lições aprendidas em suas expedições.</p>
+    <section id="relatorio-email" class="container bg-surface-color">
+        <h2 class="form-title">Modelo de Relatório</h2>
+        <p class="form-description">Este é o formato do relatório enviado por e-mail:</p>
 
-        <form action="#" method="POST" class="relatorio-form">
-            <div class="form-group">
-                <label for="titulo">Título do Relatório</label>
-                <input type="text" id="titulo" name="titulo" placeholder="Ex: Aventuras na Amazônia" required>
-            </div>
-
-            <div class="form-group">
-                <label for="data-expedicao">Data da Expedição</label>
-                <input type="date" id="data-expedicao" name="data-expedicao" required>
-            </div>
-
-            <div class="form-group">
-                <label for="resumo">Resumo</label>
-                <textarea id="resumo" name="resumo" rows="5" placeholder="Compartilhe um resumo sobre a expedição." required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="imagem-relatorio">Upload de Imagem</label>
-                <input type="file" id="imagem-relatorio" name="imagem-relatorio" accept="image/*">
-            </div>
-
-            <button type="submit" class="btn-submit">Registrar</button>
-        </form>
+        <div class="email-template">
+            <h3>Relatório de Expedição</h3>
+            <p><strong>Nome da Expedição:</strong> {{nome}}</p>
+            <p><strong>Destino:</strong> {{destino}}</p>
+            <p><strong>Data de Início:</strong> {{data}}</p>
+            <p><strong>Duração:</strong> {{duracao}} dias</p>
+            <p><strong>Descrição:</strong> {{descricao}}</p>
+        </div>
     </section>
 
     <footer class="container">
