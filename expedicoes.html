@@ -3,7 +3,6 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planeje Sua Expedição</title>
@@ -11,8 +10,9 @@
     <link rel="stylesheet" href="/styles/form.css">
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
     <script>
+        
         (function() {
-            emailjs.init("antonio.00000850120@unicap.br"); 
+            emailjs.init("Antônio Augusto"); 
         })();
 
         function sendEmail(event) {
@@ -20,7 +20,8 @@
 
             const form = event.target;
 
-            emailjs.sendForm('seu_service_id', 'seu_template_id', form)
+            // Envia o formulário pelo EmailJS
+            emailjs.sendForm('register_tnpm', 'template_5gme6zn', form) // Substitua pelos IDs do EmailJS
                 .then(() => {
                     alert('Formulário enviado com sucesso!');
                     form.reset();
@@ -43,6 +44,7 @@
         </header>
 
         <main class="container">
+            <!-- Formulário -->
             <form onsubmit="sendEmail(event)" class="expedicao-form">
                 <div class="form-group">
                     <label for="nome">Nome da Expedição</label>
