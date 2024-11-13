@@ -3,135 +3,123 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planeje Sua Expedição</title>
-    <link rel="stylesheet" href="/styles/global.css">
-    <link rel="stylesheet" href="/styles/form.css">
+    <title>Todo Mundo Pelo Mundo</title>
+    <link rel="stylesheet" href="/styles/index.css">
 </head>
 <body>
     <div class="bg-surface-color">
-        <header class="container">
-            <h1>Planeje Sua Próxima Expedição</h1>
-            <p>Preencha os dados abaixo para compartilhar sua próxima aventura com o mundo.</p>
+        <nav class="container">
+            <a class="alinhamento" href="#" id="logo">
+                <img src="/assets/icons/AirplaneTilt.svg" alt="Logomarca">
+                <span>Todo Mundo Pelo Mundo</span>
+            </a>
+
+            <ul id="primary-menu">
+                <li>
+                    <a href="#">
+                        <img src="assets/icons/MagnifyingGlass.svg" alt="Pesquisar">
+                    </a>
+                </li>
+                <li><a href="/expedicoes.html">Explore</a></li>
+                <li><a href="#">Minhas Viagens</a></li>
+                <li><a href="#">
+                    <img src="/assets/images/profile_jairo.jpg" alt="Foto de Perfil">
+                </a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <div class="container">
+                <div id="profile">
+                    <img src="/assets/images/Perfil_Jairo (1).png" alt="Foto de Perfil">
+                    <div>
+                        <h1> Jairo Lins | Personal Travel</h1>
+                        <p>Amante de viagens, cultura e gastronomia. 🌍✈️  
+                            Aqui compartilho as histórias registradas em cada clique, explorando cantinhos fascinantes do nosso planeta📸</p>
+                    </div>
+                </div>
+                <ul id="info">
+                    <li>
+                        <a class="rede-social" href="https://www.instagram.com/jairolins_pelomundo/">
+                            <img src="/assets/icons/instagram-logo-duotone.svg" alt="Instagram">
+                            <span>@jairolins_pelomundo</span>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="/assets/icons/MapPin.svg" alt="icone mapa">
+                        <span>Pernambuco, Brazil</span>
+                    </li>
+                    <li>
+                        <a class="rede-social" href="https://www.instagram.com/stories/highlights/17972787983594362/">
+                            <img src="/assets/icons/AirplaneTilt.svg" alt="Icone Aviao">
+                            <span>72 Países</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="rede-social" href="https://www.instagram.com/jairolins_pelomundo/">
+                            <img src="/assets/icons/Image.svg" alt="Icone Imagem">
+                            <span>700 Publicações</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </header>
-
-        <main class="container">
-            <form action="#" method="POST" class="expedicao-form">
-                <div class="form-group">
-                    <label for="nome">Nome da Expedição</label>
-                    <input type="text" id="nome" name="nome" placeholder="Ex: Explorando a Amazônia" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="destino">Destino</label>
-                    <input type="text" id="destino" name="destino" placeholder="Ex: Amazonas, Brasil" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="data">Data de Início</label>
-                    <input type="date" id="data" name="data" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="duracao">Duração (dias)</label>
-                    <input type="number" id="duracao" name="duracao" min="1" placeholder="Ex: 10" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="descricao">Descrição</label>
-                    <textarea id="descricao" name="descricao" rows="5" placeholder="Conte mais sobre a expedição, objetivos, atividades planejadas, etc." required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="imagem">Upload de Imagem</label>
-                    <input type="file" id="imagem" name="imagem" accept="image/*">
-                </div>
-
-                <button type="submit" class="btn-submit">Enviar</button>
-            </form>
-        </main>
     </div>
 
-    <style>
-        body {
-            font-family: "Poppins", sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
+    <main class="container">
+        <a href="https://www.instagram.com/p/C4fYrA6Lqcq/">
+            <img src="/assets/images/tailandia.jpeg" alt="Tailândia">
+        </a>
+        <a href="https://www.instagram.com/p/C4INRLSrlug/">
+            <img src="/assets/images/tokyo.jpeg" alt="Tokyo">
+        </a>
+        <a href="https://www.instagram.com/p/CzjKz3IxJm1/">
+            <img src="/assets/images/china.jpeg" alt="China">
+        </a>
+        <a href="https://www.instagram.com/p/CzVwa_rLGyp/">
+            <img src="/assets/images/sri_lanka.jpeg" alt="Sri Lanka">
+        </a>
+        <a href="https://www.instagram.com/p/Cy5gp4_rJwG/">
+            <img src="/assets/images/nepal.jpeg" alt="Nepal">
+        </a>
+        <a href="https://www.instagram.com/p/C5dlNp6xVWS/">
+            <img src="/assets/images/Indonesia.jpeg" alt="Indonesia">
+        </a>
+        <a href="https://www.instagram.com/p/CyzknG5ImZP/">
+            <img src="/assets/images/india.jpeg" alt="India">
+        </a>
+        <a href="https://www.instagram.com/p/CryeDrBggvn/">
+            <img src="/assets/images/galapagos.jpeg" alt="Galapagos">
+        </a>
+        <a href="https://www.instagram.com/p/Crb-pkuAHKs/">
+            <img src="/assets/images/gua.jpeg" alt="Guayaquil">
+        </a>
+        <a href="https://www.instagram.com/p/CtkcgYdgU_a/">
+            <img src="/assets/images/Mexico.jpeg" alt="Mexico">
+        </a>
+        <a href="">
+            <img src="/assets/images/Olinda.jpeg" alt="Olinda">
+        </a>
+        <a href="https://www.instagram.com/p/Cixd61JoaBy/">
+            <img src="/assets/images/Budapeste.jpeg" alt="imagem teste">
+        </a>
+    </main>
 
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            overflow: hidden;
-            padding: 1rem 2rem;
-        }
+    <footer class="container">
+        <span>
+            Todo Mundo Pelo Mundo &copy; 2024
+        </span>
 
-        .bg-surface-color {
-            background: #ffffff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+        <span>
+            Termos de uso
+        </span>
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #444;
-        }
-
-        p {
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-            color: #555;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-            color: #555;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #007bff;
-            box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
-        }
-
-        .btn-submit {
-            display: block;
-            width: 100%;
-            background: #007bff;
-            color: #ffffff;
-            padding: 0.75rem;
-            font-size: 1rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: center;
-            transition: background 0.3s ease;
-        }
-
-        .btn-submit:hover {
-            background: #0056b3;
-        }
-    </style>
+        <span>
+            Política de privacidade
+        </span>
+    </footer>
 </body>
 </html>
