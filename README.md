@@ -1,7 +1,7 @@
 # Todo Mundo Pelo Mundo - Planejamento de Expedições
 
 ## Descrição
-O projeto **Todo Mundo Pelo Mundo** permite que usuários planejem suas expedições e enviem informações detalhadas para um e-mail configurado. Este sistema foi desenvolvido com foco na simplicidade, organização e eficiência, permitindo que microempreendedores e entusiastas de viagens possam gerenciar seus planejamentos de maneira prática e direta.
+O projeto **Todo Mundo Pelo Mundo** permite que usuários que tenham interesse em fazer expedições em grupo possam sugerir lugares para novas expedições.
 
 ---
 
