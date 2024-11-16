@@ -17,6 +17,8 @@ Microempreendedor local, **Jairo Lins**, especialista em planejamento de viagens
 ## Envio por E-mail
 - Integração com **EmailJS** para transmitir as informações do formulário ao cliente.
 
+
+Link do template: https://www.figma.com/design/yi2vVMBaFuaIzKJKvm7L3X/Perfil-de-viagens-(Community)?node-id=3-376&node-type=canvas&t=sHiYS5ya0PI3IhUV-0
 ---
 
 # Requisitos Não-Funcionais
