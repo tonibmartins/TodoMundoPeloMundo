@@ -3,34 +3,14 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planeje Sua Expedição</title>
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/form.css">
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-    <script>
-        
-        (function() {
-            emailjs.init("1BT1iKz7d09IJLK88"); 
-        })();
-
-        function sendEmail(event) {
-            event.preventDefault();
-
-            const form = event.target;
-
-            // Envia o formulário pelo EmailJS
-            emailjs.sendForm('register_tnpm', 'template_5gme6zn', form) // Substitua pelos IDs do EmailJS
-                .then(() => {
-                    alert('Formulário enviado com sucesso!');
-                    form.reset();
-                }, (error) => {
-                    console.error('Erro ao enviar formulário:', error);
-                    alert('Ocorreu um erro ao enviar o formulário. Tente novamente mais tarde.');
-                });
-        }
-    </script>
+    <script src="/scripts/form.js"></script>
 </head>
 <body>
     <div class="bg-surface-color">
@@ -44,7 +24,6 @@
         </header>
 
         <main class="container">
-            <!-- Formulário -->
             <form onsubmit="sendEmail(event)" class="expedicao-form">
                 <div class="form-group">
                     <label for="nome">Nome da Expedição</label>
@@ -70,6 +49,12 @@
                     <label for="descricao">Descrição</label>
                     <textarea id="descricao" name="descricao" rows="5" placeholder="Conte mais sobre a expedição, objetivos, atividades planejadas, etc." required></textarea>
                 </div>
+
+                <div class="form-group">
+                    <label for="imagem">Upload de Imagem</label>
+                    <input type="file" id="imagem" name="imagem" accept="image/*">
+                </div>
+
                 <button type="submit" class="btn-submit">Enviar</button>
             </form>
         </main>
