@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protótipo - Todo Mundo Pelo Mundo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header, footer {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1em;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1em;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 1em;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group textarea, .form-group button {
+            width: 100%;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Todo Mundo Pelo Mundo</h1>
+</header>
+
+<div class="container">
+    <h2>Página Inicial</h2>
+    <p>Explore destinos incríveis e planeje sua próxima aventura!</p>
+
+    <div class="gallery">
+        <img src="https://via.placeholder.com/200" alt="Destino 1">
+        <img src="https://via.placeholder.com/200" alt="Destino 2">
+        <img src="https://via.placeholder.com/200" alt="Destino 3">
+        <img src="https://via.placeholder.com/200" alt="Destino 4">
+    </div>
+
+    <p><a href="#form">Planejar Expedição</a></p>
+</div>
+
+<div class="container" id="form">
+    <h2>Planeje Sua Expedição</h2>
+    <form>
+        <div class="form-group">
+            <label for="nome">Nome da Expedição</label>
+            <input type="text" id="nome" name="nome" placeholder="Ex: Explorando a Amazônia" required>
+        </div>
+
+        <div class="form-group">
+            <label for="destino">Destino</label>
+            <input type="text" id="destino" name="destino" placeholder="Ex: Amazonas, Brasil" required>
+        </div>
+
+        <div class="form-group">
+            <label for="data">Data de Início</label>
+            <input type="date" id="data" name="data" required>
+        </div>
+
+        <div class="form-group">
+            <label for="duracao">Duração (dias)</label>
+            <input type="number" id="duracao" name="duracao" min="1" placeholder="Ex: 10" required>
+        </div>
+
+        <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao" name="descricao" rows="5" placeholder="Conte mais sobre a expedição, objetivos, atividades planejadas, etc." required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="imagem">Upload de Imagem</label>
+            <input type="file" id="imagem" name="imagem" accept="image/*">
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2024 Todo Mundo Pelo Mundo. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('data').setAttribute('min', today);
+    });
+</script>
+
+</body>
+</html>
