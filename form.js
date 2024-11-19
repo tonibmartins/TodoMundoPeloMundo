@@ -1,5 +1,5 @@
 (function() {
-    emailjs.init("1BT1iKz7d09IJLK88"); // Substitua pelo seu user ID do EmailJS
+    emailjs.init("1BT1iKz7d09IJLK88");
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
