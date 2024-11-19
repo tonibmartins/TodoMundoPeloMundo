@@ -7,8 +7,8 @@ Microempreendedor local, **Jairo Lins**, especialista em planejamento de viagens
 # Requisitos Funcionais
 
 ## Página Inicial
-- Exibição de imagens inspiradoras de expedições.
-- Navegação para o formulário de planejamento.
+- Cliente consegue interagir com as imagens inspiradoras para conhecer um pouco das expedições já feitas
+- Cliente pode preencher um formulario que permite recomendar e mostrar interesse por um destino em especifico, inclusive demonstrando a possibilidade de data de inicio, de duração e também as expectativas que tem sobre essa expedição.
 
 ## Formulário de Expedições
 - Campos para nome, destino, data, duração e descrição da expedição.
@@ -31,5 +31,5 @@ Link do template: https://www.figma.com/design/yi2vVMBaFuaIzKJKvm7L3X/Perfil-de-
 - Carregamento rápido, mesmo em dispositivos móveis.
 - Compatibilidade com navegadores modernos.
 
-## Acessibilidade
+## Operabilidade
 - Design responsivo, adaptado para smartphones, tablets e desktops.
