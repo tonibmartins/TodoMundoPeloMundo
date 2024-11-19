@@ -12,6 +12,7 @@ Microempreendedor local, **Jairo Lins**, especialista em planejamento de viagens
 
 ## Formulário de Expedições
 - Campos para nome, destino, data, duração e descrição da expedição.
+- Somente datas válidas, nenhuma data que já tenha passado.
 - Envio dos dados preenchidos para o e-mail configurado.
 
 ## Envio por E-mail
