@@ -1,5 +1,5 @@
 (function() {
-    emailjs.init("1BT1iKz7d09IJLK88"); 
+    emailjs.init("seu_user_id_emailjs"); 
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,17 +12,12 @@ function sendEmail(event) {
 
     const form = event.target;
 
-    emailjs.sendForm('register_tnpm', 'template_5gme6zn', form)
+    emailjs.sendForm('seu_service_id', 'seu_template_id', form)
         .then(() => {
-            alert('Seu formulário foi enviado com sucesso!');
-            if (confirm('Deseja enviar outro formulário?')) {
-                form.reset();
-            } else {
-                window.location.href = 'index.html';
-            }
-        })
-        .catch((error) => {
+            alert('Formulário enviado com sucesso!');
+            form.reset();
+        }, (error) => {
             console.error('Erro ao enviar formulário:', error);
-            alert('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente mais tarde.');
+            alert('Ocorreu um erro ao enviar o formulário. Tente novamente mais tarde.');
         });
 }
