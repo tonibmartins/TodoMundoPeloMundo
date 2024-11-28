@@ -1,6 +1,6 @@
 // Inicialização do EmailJS
 (function () {
-    emailjs.init("1BT1iKz7d09IJLK88");
+    emailjs.init("1BT1iKz7d09IJLK88"); // Substitua pelo seu User ID
     console.log('EmailJS inicializado com sucesso!');
 })();
 
