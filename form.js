@@ -1,14 +1,27 @@
+// Inicialização do EmailJS
 (function () {
-    emailjs.init("1BT1iKz7d09IJLK88"); 
+    emailjs.init("1BT1iKz7d09IJLK88");
     console.log('EmailJS inicializado com sucesso!');
 })();
 
-function sendEmail(event) {
-    event.preventDefault(); 
+// Prevenir envio de datas anteriores ao dia atual
+document.addEventListener('DOMContentLoaded', () => {
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('data').setAttribute('min', today);
+});
 
-    console.log('Formulário iniciado para envio...');
+// Envio do formulário
+function sendEmail(event) {
+    event.preventDefault();
 
     const form = event.target;
+    const duracao = form.duracao.value.trim();
+
+    // Validação adicional para o campo de duração
+    if (isNaN(duracao) || duracao <= 0 || !/^\d+$/.test(duracao)) {
+        alert('A duração deve ser um número inteiro maior que zero.');
+        return;
+    }
 
     emailjs.sendForm('register_tnpm', 'template_5gme6zn', form)
         .then(() => {
