@@ -1,14 +1,12 @@
-(function() {
+(function () {
     emailjs.init("1BT1iKz7d09IJLK88"); 
+    console.log('EmailJS inicializado com sucesso!');
 })();
 
-document.addEventListener('DOMContentLoaded', () => {
-    const today = new Date().toISOString().split('T')[0];
-    document.getElementById('data').setAttribute('min', today); 
-});
-
 function sendEmail(event) {
-    event.preventDefault();
+    event.preventDefault(); 
+
+    console.log('Formulário iniciado para envio...');
 
     const form = event.target;
 
@@ -19,6 +17,6 @@ function sendEmail(event) {
             form.reset();
         }, (error) => {
             console.error('Erro ao enviar formulário:', error);
-            alert('Ocorreu um erro ao enviar o formulário. Tente novamente mais tarde.');
+            alert('Erro ao enviar o formulário. Verifique os dados e tente novamente.');
         });
 }
