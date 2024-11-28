@@ -5,46 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planeje Sua Expedição</title>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-    <script>
-        
-        (function () {
-            emailjs.init("1BT1iKz7d09IJLK88"); 
-            console.log('EmailJS inicializado com sucesso!');
-        })();
-
-        // Prevenir envio de datas anteriores ao dia atual
-        document.addEventListener('DOMContentLoaded', () => {
-            const today = new Date().toISOString().split('T')[0];
-            document.getElementById('data').setAttribute('min', today);
-        });
-
-        // Envio do formulário
-        function sendEmail(event) {
-            event.preventDefault();
-
-            const form = event.target;
-            const duracao = form.duracao.value.trim();
-
-            // Validação adicional para o campo de duração
-            if (isNaN(duracao) || duracao <= 0) {
-                alert('A duração deve ser um número maior que zero.');
-                return;
-            }
-
-            emailjs.sendForm('register_tnpm', 'template_5gme6zn', form)
-                .then(() => {
-                    console.log('Formulário enviado com sucesso!');
-                    alert('Formulário enviado com sucesso!');
-                    form.reset();
-                }, (error) => {
-                    console.error('Erro ao enviar formulário:', error);
-                    alert('Erro ao enviar o formulário. Verifique os dados e tente novamente.');
-                });
-        }
-    </script>
+    <script src="form.js" defer></script>
+    <link rel="stylesheet" href="/styles/form.css">
 </head>
 <body>
-    <form onsubmit="sendEmail(event)" method="POST">
+    <form onsubmit="sendEmail(event)" method="POST" class="expedicao-form">
+        <h1>Planeje Sua Próxima Expedição</h1>
+        <p>Preencha os dados abaixo para compartilhar sua próxima aventura com o mundo.</p>
+
         <div class="form-group">
             <label for="nome">Nome da Expedição</label>
             <input type="text" id="nome" name="nome" placeholder="Ex: Explorando a Amazônia" required>
@@ -62,7 +30,7 @@
 
         <div class="form-group">
             <label for="duracao">Duração (dias)</label>
-            <input type="number" id="duracao" name="duracao" min="1" placeholder="Ex: 10" required>
+            <input type="number" id="duracao" name="duracao" inputmode="numeric" min="1" placeholder="Ex: 10" required>
         </div>
 
         <div class="form-group">
