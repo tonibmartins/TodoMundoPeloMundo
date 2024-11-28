@@ -7,7 +7,13 @@
 // Prevenir envio de datas anteriores ao dia atual
 document.addEventListener('DOMContentLoaded', () => {
     const today = new Date().toISOString().split('T')[0];
-    document.getElementById('data').setAttribute('min', today);
+    const dateInput = document.getElementById('data');
+    if (dateInput) {
+        dateInput.setAttribute('min', today);
+        console.log('Filtro de data configurado!');
+    } else {
+        console.error('Campo de data não encontrado.');
+    }
 });
 
 // Envio do formulário
@@ -15,20 +21,22 @@ function sendEmail(event) {
     event.preventDefault();
 
     const form = event.target;
-    const duracao = form.duracao.value.trim();
+    const duracao = form.duracao?.value.trim(); // Garante que o campo exista antes de acessar
 
     // Validação adicional para o campo de duração
-    if (isNaN(duracao) || duracao <= 0 || !/^\d+$/.test(duracao)) {
+    if (!duracao || isNaN(duracao) || duracao <= 0 || !/^\d+$/.test(duracao)) {
         alert('A duração deve ser um número inteiro maior que zero.');
         return;
     }
 
+    // Envio do formulário usando EmailJS
     emailjs.sendForm('register_tnpm', 'template_5gme6zn', form)
         .then(() => {
             console.log('Formulário enviado com sucesso!');
             alert('Formulário enviado com sucesso!');
             form.reset();
-        }, (error) => {
+        })
+        .catch((error) => {
             console.error('Erro ao enviar formulário:', error);
             alert('Erro ao enviar o formulário. Verifique os dados e tente novamente.');
         });
