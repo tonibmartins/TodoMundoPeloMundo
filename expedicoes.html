@@ -38,12 +38,6 @@
                 <div class="form-group">
                     <label for="data">Data de Início</label>
                     <input type="date" id="data" name="data" min="" required>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('data').setAttribute('min', today);
-    });
-</script>
                 </div>
 
                 <div class="form-group">
