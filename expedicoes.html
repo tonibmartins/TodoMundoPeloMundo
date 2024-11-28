@@ -1,146 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planeje Sua Expedição</title>
-    <link rel="stylesheet" href="/styles/global.css">
-    <link rel="stylesheet" href="/styles/form.css">
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-    <script src="/scripts/form.js"></script>
+    <script>
+        
+        (function () {
+            emailjs.init("1BT1iKz7d09IJLK88"); 
+            console.log('EmailJS inicializado com sucesso!');
+        })();
+
+        // Prevenir envio de datas anteriores ao dia atual
+        document.addEventListener('DOMContentLoaded', () => {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('data').setAttribute('min', today);
+        });
+
+        // Envio do formulário
+        function sendEmail(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const duracao = form.duracao.value.trim();
+
+            // Validação adicional para o campo de duração
+            if (isNaN(duracao) || duracao <= 0) {
+                alert('A duração deve ser um número maior que zero.');
+                return;
+            }
+
+            emailjs.sendForm('register_tnpm', 'template_5gme6zn', form)
+                .then(() => {
+                    console.log('Formulário enviado com sucesso!');
+                    alert('Formulário enviado com sucesso!');
+                    form.reset();
+                }, (error) => {
+                    console.error('Erro ao enviar formulário:', error);
+                    alert('Erro ao enviar o formulário. Verifique os dados e tente novamente.');
+                });
+        }
+    </script>
 </head>
 <body>
-    <div class="bg-surface-color">
-        <div class="container">
-            <a href="index.html" class="link-back">&larr; Voltar para a Página Inicial</a>
+    <form onsubmit="sendEmail(event)" method="POST">
+        <div class="form-group">
+            <label for="nome">Nome da Expedição</label>
+            <input type="text" id="nome" name="nome" placeholder="Ex: Explorando a Amazônia" required>
         </div>
 
-        <header class="container">
-            <h1>Planeje Sua Próxima Expedição</h1>
-            <p>Preencha os dados abaixo para compartilhar sua próxima aventura com o mundo.</p>
-        </header>
+        <div class="form-group">
+            <label for="destino">Destino</label>
+            <input type="text" id="destino" name="destino" placeholder="Ex: Amazonas, Brasil" required>
+        </div>
 
-        <main class="container">
-            <form onsubmit="sendEmail(event)" method="POST">
-                <div class="form-group">
-                    <label for="nome">Nome da Expedição</label>
-                    <input type="text" id="nome" name="nome" placeholder="Ex: Explorando a Amazônia" required>
-                </div>
-            
-                <div class="form-group">
-                    <label for="destino">Destino</label>
-                    <input type="text" id="destino" name="destino" placeholder="Ex: Amazonas, Brasil" required>
-                </div>
-            
-                <div class="form-group">
-                    <label for="data">Data de Início</label>
-                    <input type="date" id="data" name="data" required>
-                </div>
-            
-                <div class="form-group">
-                    <label for="duracao">Duração (dias)</label>
-                    <input type="number" id="duracao" name="duracao" min="1" placeholder="Ex: 10" required>
-                </div>
-            
-                <div class="form-group">
-                    <label for="descricao">Descrição</label>
-                    <textarea id="descricao" name="descricao" rows="5" placeholder="Conte mais sobre a expedição, objetivos, atividades planejadas, etc." required></textarea>
-                </div>
-            
-                <button type="submit" class="btn-submit">Enviar</button>
-            </form>
-        </main>
-    </div>
+        <div class="form-group">
+            <label for="data">Data de Início</label>
+            <input type="date" id="data" name="data" required>
+        </div>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
+        <div class="form-group">
+            <label for="duracao">Duração (dias)</label>
+            <input type="number" id="duracao" name="duracao" min="1" placeholder="Ex: 10" required>
+        </div>
 
-        .container {
-            max-width: 800px;
-            margin: auto;
-            overflow: hidden;
-            padding: 0 20px;
-        }
+        <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao" name="descricao" rows="5" placeholder="Conte mais sobre a expedição, objetivos, atividades planejadas, etc." required></textarea>
+        </div>
 
-        .bg-surface-color {
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        p {
-            margin-bottom: 20px;
-            font-size: 1rem;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #007BFF;
-        }
-
-        .btn-submit {
-            display: inline-block;
-            background: #007BFF;
-            color: #fff;
-            padding: 10px 20px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-submit:hover {
-            background: #0056b3;
-        }
-
-        .link-back {
-            display: inline-block;
-            color: #007BFF;
-            text-decoration: none;
-            font-size: 1rem;
-            margin-bottom: 20px;
-            transition: color 0.3s ease;
-        }
-
-        .link-back:hover {
-            color: #0056b3;
-        }
-    </style>
+        <button type="submit" class="btn-submit">Enviar</button>
+    </form>
 </body>
 </html>
