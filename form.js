@@ -1,3 +1,12 @@
+(function() {
+    emailjs.init("1BT1iKz7d09IJLK88"); 
+})();
+
+document.addEventListener('DOMContentLoaded', () => {
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('data').setAttribute('min', today); 
+});
+
 function sendEmail(event) {
     event.preventDefault();
 
