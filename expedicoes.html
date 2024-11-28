@@ -4,41 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planeje Sua Expedição</title>
+    <!-- Script externo para EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-    <script src="form.js" defer></script>
-    <link rel="stylesheet" href="/styles/form.css">
+    <script src="/scripts/form.js" defer></script>
+    <!-- Estilos exclusivos para esta página -->
+    <link rel="stylesheet" href="/styles/expedicoes.css">
 </head>
 <body>
-    <form onsubmit="sendEmail(event)" method="POST" class="expedicao-form">
-        <h1>Planeje Sua Próxima Expedição</h1>
-        <p>Preencha os dados abaixo para compartilhar sua próxima aventura com o mundo.</p>
+    <div class="form-container">
+        <form onsubmit="sendEmail(event)" method="POST" class="expedicao-form">
+            <h1>Planeje Sua Próxima Expedição</h1>
+            <p>Preencha os dados abaixo para compartilhar sua próxima aventura com o mundo.</p>
 
-        <div class="form-group">
-            <label for="nome">Nome da Expedição</label>
-            <input type="text" id="nome" name="nome" placeholder="Ex: Explorando a Amazônia" required>
-        </div>
+            <div class="form-group">
+                <label for="nome">Nome da Expedição</label>
+                <input type="text" id="nome" name="nome" placeholder="Ex: Explorando a Amazônia" required>
+            </div>
 
-        <div class="form-group">
-            <label for="destino">Destino</label>
-            <input type="text" id="destino" name="destino" placeholder="Ex: Amazonas, Brasil" required>
-        </div>
+            <div class="form-group">
+                <label for="destino">Destino</label>
+                <input type="text" id="destino" name="destino" placeholder="Ex: Amazonas, Brasil" required>
+            </div>
 
-        <div class="form-group">
-            <label for="data">Data de Início</label>
-            <input type="date" id="data" name="data" required>
-        </div>
+            <div class="form-group">
+                <label for="data">Data de Início</label>
+                <input type="date" id="data" name="data" required>
+            </div>
 
-        <div class="form-group">
-            <label for="duracao">Duração (dias)</label>
-            <input type="number" id="duracao" name="duracao" inputmode="numeric" min="1" placeholder="Ex: 10" required>
-        </div>
+            <div class="form-group">
+                <label for="duracao">Duração (dias)</label>
+                <input type="number" id="duracao" name="duracao" inputmode="numeric" min="1" placeholder="Ex: 10" required>
+            </div>
 
-        <div class="form-group">
-            <label for="descricao">Descrição</label>
-            <textarea id="descricao" name="descricao" rows="5" placeholder="Conte mais sobre a expedição, objetivos, atividades planejadas, etc." required></textarea>
-        </div>
+            <div class="form-group">
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" name="descricao" rows="5" placeholder="Conte mais sobre a expedição, objetivos, atividades planejadas, etc." required></textarea>
+            </div>
 
-        <button type="submit" class="btn-submit">Enviar</button>
-    </form>
+            <button type="submit" class="btn-submit">Enviar</button>
+        </form>
+    </div>
 </body>
 </html>
