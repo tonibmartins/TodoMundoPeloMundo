@@ -1,19 +1,11 @@
-(function() {
-    emailjs.init("seu_user_id_emailjs"); 
-})();
-
-document.addEventListener('DOMContentLoaded', () => {
-    const today = new Date().toISOString().split('T')[0];
-    document.getElementById('data').setAttribute('min', today);
-});
-
 function sendEmail(event) {
     event.preventDefault();
 
     const form = event.target;
 
-    emailjs.sendForm('seu_service_id', 'seu_template_id', form)
+    emailjs.sendForm('register_tnpm', 'template_5gme6zn', form)
         .then(() => {
+            console.log('Formulário enviado com sucesso!');
             alert('Formulário enviado com sucesso!');
             form.reset();
         }, (error) => {
