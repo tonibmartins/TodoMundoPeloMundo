@@ -28,3 +28,16 @@ O projeto **Todo Mundo Pelo Mundo** permite que usuários que tenham interesse e
 - Conta no [EmailJS](https://www.emailjs.com/).
 
 ---
+
+## Exemplos Visuais
+
+### Página Inicial
+![Página Inicial](assets/tela_inicio)
+
+### Formulário de Expedição
+![Formulário de Expedição](assets/tela_form)
+
+### Confirmação
+![Confirmação](assets/confirma_form)
+
+---
