@@ -32,12 +32,12 @@ O projeto **Todo Mundo Pelo Mundo** permite que usuários que tenham interesse e
 ## Exemplos Visuais
 
 ### Página Inicial
-![Página Inicial](./assets/tela_inicio)
+![Página Inicial](./assets/tela_inicio.png)
 
 ### Formulário de Expedição
-![Formulário de Expedição](./assets/tela_form)
+![Formulário de Expedição](./assets/tela_form.png)
 
 ### Confirmação
-![Confirmação](./assets/confirma_form)
+![Confirmação](./assets/confirma_form.png)
 
 ---
